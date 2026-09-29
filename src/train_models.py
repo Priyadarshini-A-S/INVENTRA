@@ -27,9 +27,10 @@ def train_and_evaluate(base_dir=None):
     df['date'] = pd.to_datetime(df['date'])
     df = df.sort_values('date')
     
-    # Stockout Definition: stockout_flag is already present in raw data.
-    # If it's missing or we need to redefine: stockout_flag = 1 when closing == 0 and demand > 0
-    # The data already has 'stockout_flag'. Let's use it as target.
+    # Stockout Definition: Predict if 7-day demand exceeds available stock (or future stockout in 7-day horizon)
+    # Target 2: future_7d_stockout_flag
+    if 'future_stockout_flag' not in df.columns:
+        df['future_stockout_flag'] = np.where(df['next_7_day_demand'] > (df['closing'] + df.get('received', 0)), 1, 0)
     
     print("Splitting data chronologically...")
     n = len(df)
@@ -44,34 +45,40 @@ def train_and_evaluate(base_dir=None):
         'day_of_week', 'month', 'quarter', 'lag_1', 'lag_2', 'lag_3', 'lag_7', 'lag_14', 'lag_28',
         'rolling_mean_3', 'rolling_mean_7', 'rolling_mean_14', 'rolling_mean_28',
         'rolling_std_7', 'rolling_std_14', 'demand_growth_7', 'demand_growth_14',
-        'promotion_flag', 'avg_discount', 'avg_selling_price', 'closing', 'reorder_gap',
+        'promotion_flag', 'avg_discount', 'avg_selling_price', 'reorder_gap',
         'days_of_inventory', 'temp_c', 'rain_mm', 'holiday', 'weekend_flag'
     ]
     
+    # Exclude direct 'closing' leakage for stockout classifier
+    stockout_features = [f for f in features if f != 'closing']
     cat_features = ['category', 'store_type']
     
     X_train = train[features + cat_features]
+    X_train_stockout = train[stockout_features + cat_features]
     y_train_demand = train['next_7_day_demand']
-    y_train_stockout = train['stockout_flag']
+    y_train_stockout = train['future_stockout_flag']
     
     X_val = val[features + cat_features]
+    X_val_stockout = val[stockout_features + cat_features]
     y_val_demand = val['next_7_day_demand']
-    y_val_stockout = val['stockout_flag']
-    
-    X_test = test[features + cat_features]
-    y_test_demand = test['next_7_day_demand']
-    y_test_stockout = test['stockout_flag']
+    y_val_stockout = val['future_stockout_flag']
     
     preprocessor = ColumnTransformer(
         transformers=[
             ('num', SimpleImputer(strategy='median'), features),
             ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), cat_features)
         ])
+
+    preprocessor_stockout = ColumnTransformer(
+        transformers=[
+            ('num', SimpleImputer(strategy='median'), stockout_features),
+            ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), cat_features)
+        ])
         
     print("Training Demand Model...")
     demand_model = Pipeline([
         ('preprocessor', preprocessor),
-        ('regressor', RandomForestRegressor(n_estimators=30, max_depth=8, n_jobs=-1, random_state=42))
+        ('regressor', RandomForestRegressor(n_estimators=50, max_depth=8, min_samples_leaf=5, n_jobs=-1, random_state=42))
     ])
     demand_model.fit(X_train, y_train_demand)
     
@@ -86,15 +93,15 @@ def train_and_evaluate(base_dir=None):
     
     print(f"Demand Model Val MAE: {mae}, Baseline MAE: {baseline_mae}, RMSE: {rmse}, R2: {r2}")
     
-    print("Training Stockout Model...")
+    print("Training Stockout Risk Model (Regularized)...")
     stockout_model = Pipeline([
-        ('preprocessor', preprocessor),
-        ('classifier', RandomForestClassifier(n_estimators=30, max_depth=8, class_weight='balanced', n_jobs=-1, random_state=42))
+        ('preprocessor', preprocessor_stockout),
+        ('classifier', RandomForestClassifier(n_estimators=50, max_depth=6, min_samples_leaf=15, class_weight='balanced', n_jobs=-1, random_state=42))
     ])
-    stockout_model.fit(X_train, y_train_stockout)
+    stockout_model.fit(X_train_stockout, y_train_stockout)
     
-    stockout_preds = stockout_model.predict(X_val)
-    stockout_probs = stockout_model.predict_proba(X_val)[:, 1]
+    stockout_preds = stockout_model.predict(X_val_stockout)
+    stockout_probs = stockout_model.predict_proba(X_val_stockout)[:, 1]
     
     acc = accuracy_score(y_val_stockout, stockout_preds)
     prec = precision_score(y_val_stockout, stockout_preds, zero_division=0)
