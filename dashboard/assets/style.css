@@ -1,0 +1,277 @@
+/* INVENTRA — Retail Demand & Inventory Intelligence Enterprise Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-light: #ffffff;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dark: #0f172a;
+  --accent-blue: #38bdf8;
+  --accent-indigo: #6366f1;
+  --color-green: #22c55e;
+  --color-amber: #f59e0b;
+  --color-red: #ef4444;
+  --border-color: #334155;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Global Font & Body */
+html, body, [class*="css"] {
+    font-family: var(--font-sans) !important;
+}
+
+.stApp {
+    background-color: #0b1120;
+    color: #f8fafc;
+}
+
+/* Header & Top Bar */
+.inventra-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.inventra-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.inventra-logo {
+    background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.25rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+.inventra-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.inventra-subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.inventra-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+/* Metric Cards */
+.kpi-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.kpi-card:hover {
+    border-color: #475569;
+    transform: translateY(-2px);
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 0.4rem;
+}
+
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f8fafc;
+    line-height: 1.2;
+    font-family: var(--font-sans);
+}
+
+.kpi-subtext {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.4rem;
+}
+
+/* Risk Badges */
+.badge-high {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge-medium {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fde047;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge-low {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+/* Action Cards */
+.action-card {
+    background: #1e293b;
+    border-left: 4px solid #ef4444;
+    border-top: 1px solid #334155;
+    border-right: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.action-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.action-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.action-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: #0f172a;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin: 0.75rem 0;
+}
+
+.action-metric-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-metric-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.action-metric-val {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+/* Visual Decision Flow */
+.decision-flow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flow-box {
+    background: #1e293b;
+    border: 1px solid #38bdf8;
+    color: #f8fafc;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.flow-arrow {
+    color: #64748b;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Streamlit Element Overrides */
+div[data-testid="stSidebar"] {
+    background-color: #0f172a !important;
+    border-right: 1px solid #1e293b !important;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: #0f172a;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 6px;
+    color: #94a3b8;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #1e293b !important;
+    color: #38bdf8 !important;
+}

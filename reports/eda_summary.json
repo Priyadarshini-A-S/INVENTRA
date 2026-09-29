@@ -1,0 +1,82 @@
+{
+  "promo_impact": [
+    {
+      "promotion_flag": 0,
+      "avg_demand": 4.2660240389963855,
+      "avg_revenue": 404.3877801768375,
+      "stockout_rate": 0.045556890881257514,
+      "total_records": 638213
+    },
+    {
+      "promotion_flag": 1,
+      "avg_demand": 6.534448656389521,
+      "avg_revenue": 576.064684356836,
+      "stockout_rate": 0.04415129306713841,
+      "total_records": 296775
+    }
+  ],
+  "store_type_performance": [
+    {
+      "store_type": "Express",
+      "avg_demand": 4.985969828105304,
+      "avg_revenue": 459.24295548882804,
+      "stockout_rate": 0.04529397124115838,
+      "total_revenue": 114400175.67,
+      "store_count": 8
+    },
+    {
+      "store_type": "Hypermarket",
+      "avg_demand": 4.982698273038463,
+      "avg_revenue": 458.42579203247124,
+      "stockout_rate": 0.044930542621719,
+      "total_revenue": 71380104.8,
+      "store_count": 5
+    },
+    {
+      "store_type": "Supermarket",
+      "avg_demand": 4.98706464846513,
+      "avg_revenue": 458.84256062620835,
+      "stockout_rate": 0.04507756872730702,
+      "total_revenue": 243266854.58,
+      "store_count": 17
+    }
+  ],
+  "category_performance": [
+    {
+      "category": "Dairy",
+      "avg_demand": 7.283574475718522,
+      "total_revenue": 122619977.88,
+      "stockout_rate": 0.0435513798651247
+    },
+    {
+      "category": "Snacks",
+      "avg_demand": 5.8579779995463825,
+      "total_revenue": 102862207.35,
+      "stockout_rate": 0.04497051485597641
+    },
+    {
+      "category": "Beverages",
+      "avg_demand": 6.427618375761703,
+      "total_revenue": 92208947.37,
+      "stockout_rate": 0.04488122894291935
+    },
+    {
+      "category": "Frozen",
+      "avg_demand": 3.561332952126815,
+      "total_revenue": 50423002.99,
+      "stockout_rate": 0.04479811938117475
+    },
+    {
+      "category": "Personal Care",
+      "avg_demand": 2.6194558301725195,
+      "total_revenue": 32802292.66,
+      "stockout_rate": 0.046372201150128474
+    },
+    {
+      "category": "Household",
+      "avg_demand": 2.8946836514054715,
+      "total_revenue": 28130706.8,
+      "stockout_rate": 0.04687255178465106
+    }
+  ]
+}

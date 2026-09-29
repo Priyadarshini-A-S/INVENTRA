@@ -1,0 +1,52 @@
+{
+  "coverage": {
+    "min_date": "2026-01-01",
+    "max_date": "2026-04-30",
+    "total_days": 120,
+    "total_rows": 934988,
+    "num_stores": 30,
+    "num_products": 500,
+    "num_categories": 6,
+    "num_subcategories": 23,
+    "num_cities": 9,
+    "num_suppliers": 40
+  },
+  "quality_checks": [
+    {
+      "issue": "Duplicate Rows",
+      "count": 0,
+      "action_taken": "Validated index uniqueness across store-product-date tuples",
+      "status": "PASS"
+    },
+    {
+      "issue": "Missing Values",
+      "count": 0,
+      "action_taken": "Filled sparse rolling lag feature NaNs with zero imputation",
+      "status": "PASS"
+    },
+    {
+      "issue": "Invalid Quantities",
+      "count": 0,
+      "action_taken": "Clipped non-negative quantity boundaries during feature engineering",
+      "status": "PASS"
+    },
+    {
+      "issue": "Negative Prices",
+      "count": 0,
+      "action_taken": "Audited pricing boundaries across product catalog",
+      "status": "PASS"
+    },
+    {
+      "issue": "Inventory Mismatches",
+      "count": 0,
+      "action_taken": "Reconciled opening + received - sold vs closing stock balances",
+      "status": "PASS"
+    },
+    {
+      "issue": "Missing External Factors",
+      "count": 0,
+      "action_taken": "Imputed regional weather (temp_c, rain_mm) and calendar flags",
+      "status": "PASS"
+    }
+  ]
+}

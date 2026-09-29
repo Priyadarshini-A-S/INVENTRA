@@ -12,9 +12,18 @@ from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error, r2_score
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix
 
-def train_and_evaluate():
+def train_and_evaluate(base_dir=None):
+    if base_dir is None:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    data_file = os.path.join(base_dir, 'data', 'processed', 'master_dataset.csv')
+    models_dir = os.path.join(base_dir, 'models')
+    reports_dir = os.path.join(base_dir, 'reports')
+    os.makedirs(models_dir, exist_ok=True)
+    os.makedirs(reports_dir, exist_ok=True)
+
     print("Loading processed data...")
-    df = pd.read_csv('../data/processed/master_dataset.csv')
+    df = pd.read_csv(data_file)
     df['date'] = pd.to_datetime(df['date'])
     df = df.sort_values('date')
     
@@ -95,32 +104,81 @@ def train_and_evaluate():
     
     print(f"Stockout Model Val ROC-AUC: {roc}, Recall: {rec}, F1: {f1}")
     
-    print("Saving models...")
-    joblib.dump(demand_model, '../models/demand_forecast_model.pkl')
-    joblib.dump(stockout_model, '../models/stockout_risk_model.pkl')
+    print("Extracting feature importances...")
+    feature_names = demand_model.named_steps['preprocessor'].get_feature_names_out()
+    demand_importances = demand_model.named_steps['regressor'].feature_importances_
+    stockout_importances = stockout_model.named_steps['classifier'].feature_importances_
+    
+    # Map back one-hot feature names cleanly
+    cleaned_feature_names = [f.replace('num__', '').replace('cat__', '') for f in feature_names]
+    
+    demand_fi = pd.DataFrame({'feature': cleaned_feature_names, 'importance': demand_importances}).sort_values('importance', ascending=False)
+    stockout_fi = pd.DataFrame({'feature': cleaned_feature_names, 'importance': stockout_importances}).sort_values('importance', ascending=False)
+
+    cm = confusion_matrix(y_val_stockout, stockout_preds)
+    mape = mean_absolute_percentage_error(y_val_demand, demand_preds)
     
     metadata = {
         'model_name': 'RandomForest Models',
         'features': features + cat_features,
-        'train_dates': [train['date'].min(), train['date'].max()],
-        'val_dates': [val['date'].min(), val['date'].max()],
-        'test_dates': [test['date'].min(), test['date'].max()],
+        'train_dates': [str(train['date'].min()), str(train['date'].max())],
+        'val_dates': [str(val['date'].min()), str(val['date'].max())],
+        'test_dates': [str(test['date'].min()), str(test['date'].max())],
         'metrics': {
-            'demand_mae': mae, 'demand_rmse': rmse, 'demand_r2': r2,
-            'stockout_roc_auc': roc, 'stockout_recall': rec
-        }
+            'demand_baseline_mae': float(baseline_mae),
+            'demand_mae': float(mae),
+            'demand_rmse': float(rmse),
+            'demand_mape': float(mape),
+            'demand_r2': float(r2),
+            'stockout_accuracy': float(acc),
+            'stockout_precision': float(prec),
+            'stockout_recall': float(rec),
+            'stockout_f1': float(f1),
+            'stockout_roc_auc': float(roc),
+            'confusion_matrix': cm.tolist(),
+            'class_distribution': val['stockout_flag'].value_counts().to_dict()
+        },
+        'demand_feature_importance': demand_fi.to_dict('records'),
+        'stockout_feature_importance': stockout_fi.to_dict('records')
     }
-    joblib.dump(metadata, '../models/model_metadata.pkl')
+    
+    print("Saving models and metadata...")
+    joblib.dump(demand_model, os.path.join(models_dir, 'demand_forecast_model.pkl'))
+    joblib.dump(stockout_model, os.path.join(models_dir, 'stockout_risk_model.pkl'))
+    joblib.dump(metadata, os.path.join(models_dir, 'model_metadata.pkl'))
     
     # Save reports
     pd.DataFrame([{
-        'model': 'RandomForestRegressor',
-        'MAE': mae, 'RMSE': rmse, 'MAPE': mean_absolute_percentage_error(y_val_demand, demand_preds), 'R2': r2
-    }]).to_csv('../reports/model_comparison.csv', index=False)
+        'Model': 'RandomForestRegressor',
+        'Baseline_MAE': baseline_mae,
+        'MAE': mae,
+        'RMSE': rmse,
+        'MAPE': mape,
+        'R2': r2
+    }, {
+        'Model': 'Baseline (Lag 7)',
+        'Baseline_MAE': baseline_mae,
+        'MAE': baseline_mae,
+        'RMSE': np.sqrt(mean_squared_error(y_val_demand, baseline_pred)),
+        'MAPE': mean_absolute_percentage_error(y_val_demand, baseline_pred.fillna(0)),
+        'R2': r2_score(y_val_demand, baseline_pred.fillna(0))
+    }]).to_csv(os.path.join(reports_dir, 'model_comparison.csv'), index=False)
     
-    with open('../reports/model_comparison.md', 'w') as f:
-        f.write("# Model Comparison\n\nRandomForest was selected for its robust performance on non-linear relationships compared to linear baselines.\n")
-        f.write(f"\nDemand Val MAE: {mae:.2f}\nStockout Val ROC-AUC: {roc:.4f}\n")
+    with open(os.path.join(reports_dir, 'model_comparison.md'), 'w') as f:
+        f.write("# Model Comparison & Validation Report\n\n")
+        f.write("RandomForest models were trained on chronological split (70% Train, 15% Validation, 15% Test).\n\n")
+        f.write("## Demand Forecast Model\n")
+        f.write(f"- Baseline MAE (Lag 7): {baseline_mae:.4f}\n")
+        f.write(f"- Model MAE: {mae:.4f}\n")
+        f.write(f"- Model RMSE: {rmse:.4f}\n")
+        f.write(f"- Model MAPE: {mape:.4f}\n")
+        f.write(f"- Model R²: {r2:.4f}\n\n")
+        f.write("## Stock-out Classification Model\n")
+        f.write(f"- Accuracy: {acc:.4f}\n")
+        f.write(f"- Precision: {prec:.4f}\n")
+        f.write(f"- Recall: {rec:.4f}\n")
+        f.write(f"- F1-Score: {f1:.4f}\n")
+        f.write(f"- ROC-AUC: {roc:.4f}\n")
         
     print("Done!")
 

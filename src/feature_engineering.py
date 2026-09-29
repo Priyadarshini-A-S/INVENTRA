@@ -51,4 +51,8 @@ def create_features(input_file, output_file):
     print("Done!")
 
 if __name__ == '__main__':
-    create_features('../data/raw/master_cleaned.csv', '../data/processed/master_dataset.csv')
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    input_p = os.path.join(base_dir, 'data', 'raw', 'master_cleaned.csv')
+    output_p = os.path.join(base_dir, 'data', 'processed', 'master_dataset.csv')
+    os.makedirs(os.path.dirname(output_p), exist_ok=True)
+    create_features(input_p, output_p)
