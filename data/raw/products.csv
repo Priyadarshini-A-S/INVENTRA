@@ -1,0 +1,501 @@
+product_id,category,sub_category,brand,mrp,cost_price,shelf_life_days,supplier_id
+P0001,Frozen,Ice Cream,Aavin,150,93.64,30
+P0002,Frozen,Ice Cream,CoolSip,150,118.63,7
+P0003,Personal Care,Shampoo,Aavin,30,18.27,365
+P0004,Dairy,Curd,SmartChoice,120,88.72,180
+P0005,Personal Care,Toothpaste,Aavin,180,138.16,180
+P0006,Snacks,Chips,Crispo,180,115.36,7
+P0007,Dairy,Butter,DailyNeeds,100,62.14,3
+P0008,Household,Detergent,PureLife,30,20.97,730
+P0009,Household,Cleaner,SmartChoice,30,16.87,30
+P0010,Dairy,Curd,GlowCare,60,37.5,90
+P0011,Snacks,Cookies,Crispo,120,74.65,7
+P0012,Frozen,Ice Cream,QuickBite,150,92.41,240
+P0013,Snacks,Chips,CoolSip,50,38.88,3
+P0014,Dairy,Butter,PureLife,45,25.55,730
+P0015,Beverages,Energy Drink,PureLife,300,239.08,240
+P0016,Snacks,Chips,Crispo,150,105.24,60
+P0017,Personal Care,Skin Care,DailyNeeds,40,32.77,15
+P0018,Personal Care,Shampoo,Aavin,220,127.51,15
+P0019,Household,Detergent,PureLife,60,42.65,240
+P0020,Snacks,Biscuits,CoolSip,150,87.14,365
+P0021,Frozen,Frozen Snacks,GlowCare,45,30.03,240
+P0022,Frozen,Frozen Vegetables,FreshDay,80,60.46,365
+P0023,Frozen,Frozen Snacks,CoolSip,80,57.15,15
+P0024,Beverages,Soft Drink,NatureBest,50,34.1,7
+P0025,Snacks,Chips,Aavin,40,31.48,7
+P0026,BEVERAGES,Frozen Snacks,GlowCare,180,124.89,15
+P0027,Frozen,Frozen Snacks,QuickBite,35,21.75,730
+P0028,Beverages,Juice,SmartChoice,45,29.6,90
+P0029,Household,Dishwash,GlowCare,40,24.43,90
+P0030,Household,Cleaner,NatureBest,40,22.08,3
+P0031,Dairy,Milk,DailyNeeds,30,20.66,60
+P0032,Beverages,Juice,SmartChoice,300,236.47,730
+P0033,Beverages,Energy Drink,PureLife,40,23.02,180
+P0034,Personal Care,Skin Care,HomePlus,220,164.31,7
+P0035,Personal Care,Toothpaste,GlowCare,40,24.07,365
+P0036,Beverages,Energy Drink,FizzUp,45,30.37,7
+P0037,Household,Detergent,Aavin,120,98.38,3
+P0038,Beverages,Juice,PureLife,70,47.6,180
+P0039,Beverages,Energy Drink,Aavin,60,37.3,240
+P0040,Personal Care,Skin Care,FizzUp,40,25.2,3
+P0041,Frozen,Frozen Vegetables,Aavin,150,95.2,3
+P0042,Personal Care,Soap,Aavin,80,45.73,15
+P0043,Household,Detergent,CoolSip,220,134.97,7
+P0044,Beverages,Soft Drink,NatureBest,30,19.9,730
+P0045,Household,Tissue,FreshDay,40,29.23,90
+P0046,Snacks,Namkeen,FizzUp,120,86.91,240
+P0047,Dairy,Milk,HomePlus,100,81.96,7
+P0048,Household,Cleaner,QuickBite,45,26.36,90
+P0049,Beverages,Water,FreshDay,35,23.39,365
+P0050,Household,Detergent,CoolSip,220,153.94,7
+P0051,Snacks,Biscuits,GlowCare,150,104.91,60
+P0052,Household,Cleaner,SmartChoice,50,30.25,60
+P0053,Personal Care,Toothpaste,Aavin,30,21.64,60
+P0054,Dairy,Butter,FizzUp,120,97.75,15
+P0055,Household,Dishwash,QuickBite,25,14.51,15
+P0056,Dairy,Butter,NatureBest,80,47.2,15
+P0057,Snacks,Cookies,Aavin,300,193.98,30
+P0058,Snacks,Namkeen,NatureBest,150,88.76,30
+P0059,Beverages,Energy Drink,Aavin,35,26.21,90
+P0060,Frozen,Frozen Vegetables,Crispo,45,26.68,7
+P0061,Dairy,Cheese,Crispo,40,30.82,240
+P0062,Snacks,Chips,Crispo,25,18.21,180
+P0063,Snacks,Biscuits,FreshDay,50,36.16,180
+P0064,Snacks,Biscuits,GlowCare,300,243.6,15
+P0065,Snacks,Biscuits,GlowCare,100,66.73,90
+P0066,Household,Detergent,PureLife,300,211.7,60
+P0067,Frozen,Frozen Snacks,Aavin,80,63.99,365
+P0068,Snacks,Namkeen,GlowCare,120,95.83,730
+P0069,Frozen,Ice Cream,SmartChoice,300,189.33,60
+P0070,Snacks,Namkeen,SmartChoice,45,31.49,30
+P0071,Frozen,Frozen Snacks,CoolSip,150,119.06,730
+P0072,Snacks,Namkeen,QuickBite,220,121.02,60
+P0073,Personal Care,Toothpaste,HomePlus,70,46.86,30
+P0074,Personal Care,Soap,CoolSip,30,18.8,730
+P0075,Dairy,Curd,CoolSip,45,27.48,30
+P0076,Dairy,Milk,Crispo,70,50.05,7
+P0077,Personal Care,Soap,SmartChoice,150,98.05,180
+P0078,Beverages,Soft Drink,GlowCare,180,119.66,15
+P0079,Personal Care,Shampoo,QuickBite,40,31.91,7
+P0080,Beverages,Energy Drink,CoolSip,80,65.34,730
+P0081,Personal Care,Skin Care,QuickBite,70,55.46,240
+P0082,Snacks,Chips,CoolSip,45,34.05,365
+P0083,Frozen,Ice Cream,FreshDay,70,39.96,60
+P0084,Snacks,Cookies,DailyNeeds,300,208.75,15
+P0085,Beverages,Energy Drink,SmartChoice,35,25.93,7
+P0086,Personal Care,Toothpaste,QuickBite,70,46.36,30
+P0087,Personal Care,Shampoo,NatureBest,60,40.73,90
+P0088,Personal Care,Skin Care,QuickBite,150,112.25,730
+P0089,Personal Care,Soap,FreshDay,60,40.87,180
+P0090,Frozen,Frozen Vegetables,PureLife,150,89.18,240
+P0091,Household,Detergent,PureLife,100,70.24,3
+P0092,Frozen,Frozen Snacks,FizzUp,220,148.42,3
+P0093,Personal Care,Toothpaste,Crispo,70,44.68,180
+P0094,Personal Care,Toothpaste,GlowCare,70,38.87,365
+P0095,Snacks,Chips,CoolSip,30,22.83,3
+P0096,Beverages,Juice,Aavin,100,59.11,15
+P0097,Frozen,Ice Cream,NatureBest,40,27.02,60
+P0098,Beverages,Soft Drink,FizzUp,45,26.06,3
+P0099,Household,Dishwash,PureLife,150,90.53,730
+P0100,Dairy,Butter,CoolSip,100,76.75,730
+P0101,Snacks,Namkeen,CoolSip,50,28.43,90
+P0102,Personal Care,Skin Care,GlowCare,60,48.56,240
+P0103,Personal Care,Soap,SmartChoice,80,64.85,60
+P0104,Household,Dishwash,HomePlus,60,46.38,730
+P0105,Snacks,Chips,GlowCare,45,35.46,30
+P0106,Household,Dishwash,DailyNeeds,25,17.09,90
+P0107,Personal Care,Soap,DailyNeeds,180,111.56,60
+P0108,Frozen,Frozen Snacks,QuickBite,25,17.24,30
+P0109,Beverages,Energy Drink,HomePlus,80,60.38,240
+P0110,Personal Care,Shampoo,GlowCare,45,27.44,30
+P0111,Frozen,Frozen Vegetables,DailyNeeds,70,48.96,90
+P0112,Frozen,Frozen Vegetables,DailyNeeds,50,36.99,60
+P0113,Snacks,Chips,GlowCare,150,90.3,7
+P0114,Frozen,Ice Cream,Crispo,40,29.98,60
+P0115,Household,Tissue,GlowCare,220,132.53,30
+P0116,Beverages,Water,Aavin,150,104.13,60
+P0117,Dairy,Butter,SmartChoice,35,25.28,240
+P0118,Dairy,Butter,HomePlus,70,46.82,15
+P0119,Snacks,Namkeen,GlowCare,220,124.88,240
+P0120,Household,Detergent,FizzUp,35,26.92,60
+P0121,Beverages,Soft Drink,QuickBite,180,119.23,730
+P0122,Beverages,Energy Drink,HomePlus,300,200.86,730
+P0123,Snacks,Biscuits,NatureBest,150,86.52,30
+P0124,Snacks,Biscuits,FizzUp,40,23.88,7
+P0125,Dairy,Cheese,HomePlus,150,106.55,60
+P0126,Beverages,Water,SmartChoice,45,33.29,240
+P0127,beverages,Ice Cream,FreshDay,180,137.45,730
+P0128,Personal Care,Shampoo,QuickBite,40,28.99,60
+P0129,Dairy,Milk,FizzUp,180,113.95,730
+P0130,Personal Care,Shampoo,HomePlus,150,94.82,180
+P0131,Household,Dishwash,HomePlus,30,21.34,180
+P0132,Household,Tissue,Aavin,30,18.35,730
+P0133,Dairy,Butter,NatureBest,25,18.9,15
+P0134,Household,Dishwash,FreshDay,35,28.67,180
+P0135,Dairy,Cheese,DailyNeeds,60,38.4,7
+P0136,Snacks,Namkeen,SmartChoice,70,43.95,180
+P0137,Dairy,Cheese,GlowCare,50,30.91,7
+P0138,Household,Detergent,CoolSip,220,153.23,180
+P0139,Beverages,Water,NatureBest,180,123.23,240
+P0140,Beverages,Water,QuickBite,35,28.02,240
+P0141,Dairy,Milk,CoolSip,100,76.58,15
+P0142,Household,Detergent,QuickBite,60,34.51,7
+P0143,Dairy,Curd,HomePlus,300,223.04,365
+P0144,Personal Care,Skin Care,HomePlus,40,26.93,15
+P0145,Beverages,Juice,GlowCare,45,34.14,180
+P0146,Household,Tissue,Aavin,45,33.57,730
+P0147,Frozen,Frozen Snacks,FizzUp,70,48.68,90
+P0148,Household,Dishwash,HomePlus,300,191.06,30
+P0149,Household,Dishwash,Crispo,220,167.07,3
+P0150,Frozen,Frozen Snacks,SmartChoice,300,230.72,180
+P0151,Personal Care,Shampoo,FizzUp,80,64.85,90
+P0152,Personal Care,Shampoo,QuickBite,300,202.01,15
+P0153,Frozen,Ice Cream,GlowCare,70,53.27,60
+P0154,Household,Dishwash,CoolSip,30,23.4,365
+P0155,Snacks,Namkeen,QuickBite,25,17.92,30
+P0156,Beverages,Soft Drink,PureLife,30,22.66,7
+P0157,Beverages,Water,Aavin,25,15.94,3
+P0158,Snacks,Cookies,PureLife,35,21.56,180
+P0159,Frozen,Ice Cream,FizzUp,35,20.0,180
+P0160,Frozen,Ice Cream,HomePlus,300,212.24,30
+P0161,Frozen,Frozen Snacks,HomePlus,45,32.85,240
+P0162,Frozen,Frozen Vegetables,FizzUp,30,20.08,90
+P0163,Snacks,Namkeen,SmartChoice,45,30.3,60
+P0164,Personal Care,Skin Care,GlowCare,40,26.12,90
+P0165,Snacks,Cookies,Aavin,220,160.1,60
+P0166,Household,Detergent,NatureBest,150,102.62,60
+P0167,Household,Tissue,Crispo,120,72.16,60
+P0168,Frozen,Ice Cream,CoolSip,120,67.28,240
+P0169,Household,Tissue,SmartChoice,35,20.1,60
+P0170,Frozen,Frozen Snacks,FizzUp,40,23.43,365
+P0171,Household,Tissue,FizzUp,45,35.86,240
+P0172,Frozen,Frozen Snacks,GlowCare,70,56.7,15
+P0173,Frozen,Frozen Vegetables,CoolSip,60,48.67,365
+P0174,Dairy,Cheese,Aavin,45,31.27,240
+P0175,Frozen,Frozen Vegetables,CoolSip,45,31.85,90
+P0176,Frozen,Ice Cream,HomePlus,25,17.93,365
+P0177,Household,Cleaner,CoolSip,30,21.65,240
+P0178,Frozen,Frozen Snacks,GlowCare,35,19.68,3
+P0179,Personal Care,Shampoo,GlowCare,40,31.58,15
+P0180,Personal Care,Toothpaste,CoolSip,150,110.71,365
+P0181,Household,Cleaner,PureLife,120,69.21,240
+P0182,Personal Care,Toothpaste,Aavin,150,97.51,240
+P0183,Beverages,Water,GlowCare,120,77.9,90
+P0184,Personal Care,Toothpaste,Crispo,30,24.19,240
+P0185,Frozen,Ice Cream,CoolSip,120,85.35,3
+P0186,Snacks,Chips,FizzUp,180,126.44,7
+P0187,Beverages,Juice,Crispo,50,37.95,730
+P0188,Snacks,Chips,FizzUp,80,49.41,15
+P0189,Frozen,Ice Cream,FizzUp,25,16.17,30
+P0190,Snacks,Biscuits,FizzUp,45,25.39,180
+P0191,Dairy,Milk,HomePlus,70,53.2,365
+P0192,Dairy,Cheese,QuickBite,40,32.21,3
+P0193,Snacks,Namkeen,CoolSip,25,14.16,240
+P0194,Personal Care,Shampoo,HomePlus,150,119.34,7
+P0195,Snacks,Chips,GlowCare,35,21.85,730
+P0196,Frozen,Frozen Snacks,PureLife,100,69.33,240
+P0197,Household,Dishwash,GlowCare,180,133.11,365
+P0198,Personal Care,Skin Care,Crispo,60,38.49,240
+P0199,Personal Care,Shampoo,DailyNeeds,60,38.06,60
+P0200,Beverages,Energy Drink,GlowCare,30,23.24,7
+P0201,Dairy,Butter,FizzUp,80,45.3,365
+P0202,Snacks,Biscuits,PureLife,50,39.29,180
+P0203,Snacks,Cookies,DailyNeeds,30,21.18,30
+P0204,Frozen,Frozen Snacks,Crispo,220,127.43,365
+P0205,Dairy,Butter,NatureBest,40,30.72,365
+P0206,Household,Detergent,NatureBest,300,218.28,60
+P0207,Beverages,Water,SmartChoice,180,114.02,90
+P0208,Dairy,Curd,FizzUp,100,72.75,7
+P0209,Frozen,Frozen Vegetables,Aavin,30,22.54,30
+P0210,Personal Care,Skin Care,DailyNeeds,35,22.75,90
+P0211,Household,Detergent,Aavin,35,20.74,730
+P0212,Frozen,Ice Cream,FreshDay,70,51.01,240
+P0213,Personal Care,Skin Care,FreshDay,40,30.15,7
+P0214,Personal Care,Shampoo,FreshDay,120,87.98,240
+P0215,Frozen,Frozen Snacks,Aavin,40,26.27,730
+P0216,Dairy,Curd,FreshDay,40,30.29,60
+P0217,Snacks,Biscuits,Aavin,70,52.62,15
+P0218,Personal Care,Soap,QuickBite,80,62.0,90
+P0219,Personal Care,Shampoo,PureLife,25,16.85,7
+P0220,Household,Dishwash,NatureBest,60,44.49,180
+P0221,Dairy,Cheese,Aavin,50,29.82,730
+P0222,Frozen,Frozen Snacks,GlowCare,60,46.68,30
+P0223,Household,Dishwash,QuickBite,30,19.71,60
+P0224,Beverages,Water,FizzUp,30,20.63,7
+P0225,Household,Cleaner,DailyNeeds,50,37.32,15
+P0226,Dairy,Curd,FreshDay,40,23.87,15
+P0227,Beverages,Energy Drink,HomePlus,180,126.4,730
+P0228,Frozen,Frozen Vegetables,CoolSip,120,97.96,90
+P0229,Beverages,Energy Drink,GlowCare,70,46.86,60
+P0230,Household,Detergent,DailyNeeds,80,45.6,240
+P0231,Dairy,Milk,DailyNeeds,220,138.05,7
+P0232,Household,Dishwash,HomePlus,100,69.97,3
+P0233,Household,Cleaner,DailyNeeds,100,67.84,15
+P0234,Personal Care,Shampoo,DailyNeeds,150,85.92,15
+P0235,Beverages,Energy Drink,HomePlus,80,55.29,15
+P0236,Snacks,Cookies,PureLife,60,45.55,730
+P0237,Frozen,Frozen Vegetables,DailyNeeds,30,19.17,365
+P0238,Snacks,Cookies,SmartChoice,220,160.0,730
+P0239,Snacks,Biscuits,NatureBest,120,70.58,90
+P0240,Frozen,Frozen Vegetables,CoolSip,60,35.09,7
+P0241,Household,Dishwash,CoolSip,180,114.96,15
+P0242,Dairy,Cheese,QuickBite,50,27.75,60
+P0243,Beverages,Water,HomePlus,40,24.45,15
+P0244,Dairy,Butter,GlowCare,80,60.65,365
+P0245,Frozen,Frozen Snacks,NatureBest,35,24.89,15
+P0246,Beverages,Juice,SmartChoice,70,39.33,90
+P0247,Personal Care,Toothpaste,SmartChoice,180,120.82,365
+P0248,Snacks,Namkeen,Crispo,50,36.66,730
+P0249,Personal Care,Toothpaste,PureLife,80,55.39,15
+P0250,Household,Cleaner,FreshDay,25,18.08,90
+P0251,Dairy,Milk,FreshDay,30,22.68,60
+P0252,Household,Cleaner,PureLife,30,24.17,30
+P0253,Snacks,Biscuits,PureLife,25,16.43,90
+P0254,Personal Care,Shampoo,DailyNeeds,40,22.3,7
+P0255,Beverages,Juice,Aavin,45,35.9,240
+P0256,Frozen,Frozen Snacks,HomePlus,100,55.14,7
+P0257,Snacks,Chips,FizzUp,80,64.31,730
+P0258,Personal Care,Shampoo,FreshDay,40,25.25,3
+P0259,Personal Care,Skin Care,GlowCare,30,23.28,240
+P0260,Household,Detergent,CoolSip,80,56.42,15
+P0261,Personal Care,Shampoo,NatureBest,50,30.75,180
+P0262,Frozen,Frozen Vegetables,GlowCare,80,65.05,7
+P0263,Household,Detergent,PureLife,220,148.93,180
+P0264,Snacks,Biscuits,DailyNeeds,180,102.28,30
+P0265,Household,Tissue,FizzUp,25,16.13,90
+P0266,Frozen,Frozen Snacks,SmartChoice,70,50.44,15
+P0267,Frozen,Frozen Snacks,Aavin,45,27.2,30
+P0268,Snacks,Cookies,QuickBite,60,49.02,365
+P0269,Snacks,Biscuits,CoolSip,40,25.09,3
+P0270,Snacks,Biscuits,DailyNeeds,60,47.41,240
+P0271,Snacks,Chips,HomePlus,150,102.65,365
+P0272,Dairy,Cheese,GlowCare,60,42.76,15
+P0273,Snacks,Cookies,GlowCare,30,19.16,60
+P0274,Personal Care,Skin Care,FizzUp,150,100.48,240
+P0275,Frozen,Frozen Snacks,NatureBest,60,37.45,3
+P0276,Frozen,Frozen Vegetables,PureLife,50,34.43,15
+P0277,Beverages,Energy Drink,Aavin,35,19.89,90
+P0278,Personal Care,Shampoo,NatureBest,35,25.67,90
+P0279,Personal Care,Shampoo,NatureBest,35,24.25,180
+P0280,Frozen,Frozen Snacks,Crispo,30,16.71,15
+P0281,Household,Dishwash,QuickBite,30,18.62,60
+P0282,Beverages,Water,SmartChoice,300,245.89,30
+P0283,Beverages,Soft Drink,HomePlus,35,27.74,240
+P0284,Frozen,Frozen Snacks,CoolSip,50,37.08,365
+P0285,Snacks,Cookies,FizzUp,150,111.24,15
+P0286,Household,Cleaner,GlowCare,40,30.55,30
+P0287,Dairy,Butter,QuickBite,100,64.96,365
+P0288,Household,Detergent,GlowCare,45,29.59,240
+P0289,Personal Care,Skin Care,NatureBest,30,17.52,90
+P0290,Personal Care,Skin Care,CoolSip,80,51.44,365
+P0291,Beverages,Juice,PureLife,80,63.67,3
+P0292,Household,Cleaner,FreshDay,35,20.78,30
+P0293,Household,Tissue,GlowCare,45,27.14,365
+P0294,Beverages,Water,NatureBest,80,46.02,15
+P0295,Household,Cleaner,FizzUp,120,86.23,730
+P0296,Household,Detergent,Aavin,30,16.87,730
+P0297,Frozen,Ice Cream,NatureBest,60,43.01,3
+P0298,Frozen,Frozen Vegetables,FreshDay,120,97.0,240
+P0299,Frozen,Frozen Snacks,FreshDay,70,39.88,3
+P0300,Personal Care,Skin Care,HomePlus,70,42.36,730
+P0301,Snacks,Cookies,SmartChoice,220,141.52,180
+P0302,Snacks,Biscuits,DailyNeeds,40,27.04,60
+P0303,Beverages,Juice,GlowCare,25,15.71,180
+P0304,Personal Care,Soap,FizzUp,220,140.45,730
+P0305,Beverages,Juice,HomePlus,80,54.08,60
+P0306,Dairy,Milk,PureLife,80,53.88,30
+P0307,Household,Tissue,Aavin,25,15.65,730
+P0308,Snacks,Biscuits,GlowCare,60,35.17,60
+P0309,Personal Care,Toothpaste,Aavin,60,33.83,365
+P0310,Snacks,Cookies,GlowCare,60,41.17,365
+P0311,Household,Detergent,FizzUp,30,19.69,90
+P0312,Snacks,Chips,Crispo,100,68.75,365
+P0313,Dairy,Milk,FizzUp,150,95.99,240
+P0314,Personal Care,Soap,NatureBest,300,206.76,90
+P0315,Snacks,Chips,PureLife,100,74.96,60
+P0316,Snacks,Namkeen,SmartChoice,100,63.09,3
+P0317,Snacks,Biscuits,PureLife,100,63.31,3
+P0318,Personal Care,Toothpaste,CoolSip,180,146.24,730
+P0319,Beverages,Soft Drink,NatureBest,70,41.72,730
+P0320,Beverages,Juice,Aavin,100,80.6,7
+P0321,Dairy,Cheese,DailyNeeds,60,35.45,30
+P0322,Household,Dishwash,SmartChoice,150,85.02,15
+P0323,Beverages,Water,CoolSip,70,48.43,90
+P0324,Personal Care,Toothpaste,QuickBite,50,36.62,60
+P0325,Personal Care,Soap,Crispo,45,31.53,30
+P0326,Snacks,Chips,SmartChoice,150,102.3,240
+P0327,Household,Tissue,FreshDay,30,21.15,365
+P0328,Beverages,Toothpaste,FizzUp,45,25.26,7
+P0329,Personal Care,Toothpaste,SmartChoice,70,42.54,365
+P0330,Household,Tissue,FizzUp,30,21.49,730
+P0331,Beverages,Soft Drink,CoolSip,300,208.01,30
+P0332,Dairy,Cheese,DailyNeeds,150,101.63,15
+P0333,Household,Cleaner,PureLife,120,96.3,240
+P0334,Frozen,Ice Cream,FreshDay,50,31.35,3
+P0335,Frozen,Frozen Vegetables,Crispo,80,59.96,3
+P0336,Personal Care,Soap,Aavin,220,144.58,240
+P0337,Frozen,Frozen Snacks,Aavin,25,15.76,730
+P0338,Snacks,Cookies,HomePlus,120,83.6,240
+P0339,Household,Dishwash,FreshDay,40,30.74,90
+P0340,Frozen,Frozen Snacks,CoolSip,45,33.48,3
+P0341,Snacks,Chips,FizzUp,100,78.12,180
+P0342,Household,Tissue,GlowCare,60,43.84,15
+P0343,Personal Care,Toothpaste,Crispo,25,15.51,30
+P0344,Snacks,Cookies,FreshDay,100,74.52,3
+P0345,Frozen,Frozen Snacks,SmartChoice,40,22.67,7
+P0346,Snacks,Chips,PureLife,120,82.28,60
+P0347,Frozen,Frozen Snacks,DailyNeeds,100,60.96,15
+P0348,Beverages,Energy Drink,SmartChoice,100,65.09,365
+P0349,Household,Cleaner,Crispo,120,90.45,7
+P0350,Personal Care,Toothpaste,GlowCare,300,210.7,3
+P0351,Household,Cleaner,NatureBest,80,47.24,90
+P0352,Personal Care,Shampoo,CoolSip,40,29.74,240
+P0353,Household,Dishwash,Aavin,70,40.99,180
+P0354,Household,Detergent,QuickBite,70,51.22,60
+P0355,Personal Care,Toothpaste,Aavin,150,91.33,7
+P0356,Personal Care,Toothpaste,SmartChoice,30,20.88,3
+P0357,Personal Care,Shampoo,FreshDay,60,35.92,15
+P0358,Snacks,Namkeen,HomePlus,220,175.48,180
+P0359,Dairy,Curd,CoolSip,220,141.66,15
+P0360,Personal Care,Soap,SmartChoice,40,31.02,3
+P0361,Personal Care,Skin Care,QuickBite,60,46.34,30
+P0362,Snacks,Chips,FreshDay,40,32.12,7
+P0363,Frozen,Frozen Snacks,NatureBest,180,144.5,3
+P0364,Beverages,Soft Drink,GlowCare,100,55.91,730
+P0365,Beverages,Soft Drink,PureLife,70,42.93,30
+P0366,Beverages,Water,Crispo,220,175.43,730
+P0367,Household,Tissue,Crispo,45,35.4,365
+P0368,Personal Care,Toothpaste,FreshDay,25,17.51,730
+P0369,Frozen,Frozen Vegetables,PureLife,80,54.71,90
+P0370,Household,Tissue,SmartChoice,60,39.61,60
+P0371,Beverages,Energy Drink,Crispo,220,134.39,15
+P0372,Dairy,Cheese,PureLife,80,55.45,180
+P0373,Snacks,Chips,DailyNeeds,120,68.56,240
+P0374,Dairy,Curd,Aavin,45,29.33,730
+P0375,Dairy,Milk,Crispo,180,136.02,365
+P0376,Personal Care,Soap,DailyNeeds,45,36.38,3
+P0377,Beverages,Soft Drink,SmartChoice,180,122.28,30
+P0378,Frozen,Ice Cream,PureLife,300,184.39,90
+P0379,Personal Care,Skin Care,QuickBite,120,77.64,60
+P0380,Household,Dishwash,HomePlus,30,23.0,240
+P0381,Beverages,Water,DailyNeeds,60,33.74,30
+P0382,Dairy,Butter,QuickBite,300,212.31,180
+P0383,Beverages,Juice,DailyNeeds,40,26.1,30
+P0384,Household,Tissue,FreshDay,180,138.93,240
+P0385,Beverages,Water,FizzUp,35,26.06,240
+P0386,Household,Detergent,QuickBite,25,19.41,7
+P0387,Dairy,Cheese,FizzUp,220,158.46,7
+P0388,Dairy,Curd,QuickBite,70,45.55,730
+P0389,Personal Care,Skin Care,Aavin,25,17.34,180
+P0390,Dairy,Butter,QuickBite,45,24.96,180
+P0391,Dairy,Milk,QuickBite,35,21.53,730
+P0392,Snacks,Cookies,FreshDay,180,118.29,90
+P0393,Personal Care,Soap,SmartChoice,40,25.24,7
+P0394,Dairy,Cheese,PureLife,60,41.95,3
+P0395,Frozen,Ice Cream,GlowCare,70,54.48,90
+P0396,Dairy,Milk,Crispo,40,31.73,730
+P0397,Snacks,Biscuits,GlowCare,120,95.99,365
+P0398,Frozen,Ice Cream,FizzUp,300,233.88,3
+P0399,Household,Cleaner,SmartChoice,220,144.66,7
+P0400,Beverages,Juice,NatureBest,220,171.46,365
+P0401,Personal Care,Soap,SmartChoice,150,85.68,90
+P0402,Dairy,Cheese,Crispo,220,125.52,730
+P0403,Household,Dishwash,DailyNeeds,25,18.03,240
+P0404,Beverages,Water,QuickBite,60,40.0,730
+P0405,Dairy,Butter,Crispo,150,85.48,60
+P0406,Personal Care,Soap,SmartChoice,60,38.13,7
+P0407,Dairy,Butter,HomePlus,50,37.78,7
+P0408,Dairy,Curd,PureLife,70,49.03,365
+P0409,Dairy,Milk,GlowCare,50,34.98,730
+P0410,Snacks,Namkeen,Aavin,45,29.78,7
+P0411,Beverages,Juice,CoolSip,60,35.75,60
+P0412,Snacks,Namkeen,FizzUp,30,17.85,60
+P0413,Snacks,Namkeen,GlowCare,50,30.9,30
+P0414,Household,Cleaner,HomePlus,30,17.6,3
+P0415,Snacks,Namkeen,DailyNeeds,70,44.83,730
+P0416,Snacks,Cookies,NatureBest,150,90.63,90
+P0417,Personal Care,Toothpaste,FreshDay,150,110.65,240
+P0418,Beverages,Water,PureLife,45,34.67,180
+P0419,Dairy,Curd,NatureBest,80,47.89,365
+P0420,Frozen,Frozen Snacks,SmartChoice,40,26.74,60
+P0421,Personal Care,Skin Care,FizzUp,120,75.81,60
+P0422,Frozen,Frozen Snacks,PureLife,30,20.14,730
+P0423,Household,Dishwash,QuickBite,80,63.95,180
+P0424,Dairy,Butter,SmartChoice,300,230.8,730
+P0425,Dairy,Curd,CoolSip,120,77.5,730
+P0426,Household,Dishwash,DailyNeeds,180,119.92,3
+P0427,Snacks,Chips,QuickBite,150,103.51,730
+P0428,Beverages,Energy Drink,DailyNeeds,60,40.5,730
+P0429,Beverages,Water,Aavin,70,40.48,180
+P0430,Dairy,Curd,DailyNeeds,45,28.92,30
+P0431,Personal Care,Toothpaste,HomePlus,30,20.05,240
+P0432,Dairy,Butter,Aavin,180,133.54,3
+P0433,Frozen,Ice Cream,CoolSip,180,106.99,30
+P0434,Beverages,Juice,DailyNeeds,80,53.21,240
+P0435,Personal Care,Soap,FizzUp,120,87.3,180
+P0436,Frozen,Frozen Vegetables,Crispo,70,49.69,180
+P0437,Frozen,Ice Cream,Crispo,45,33.89,7
+P0438,Dairy,Curd,DailyNeeds,50,30.16,7
+P0439,Frozen,Frozen Snacks,QuickBite,120,76.15,180
+P0440,Personal Care,Shampoo,DailyNeeds,50,38.91,730
+P0441,Frozen,Frozen Vegetables,FreshDay,300,214.77,7
+P0442,Snacks,Biscuits,Crispo,45,26.17,90
+P0443,Household,Dishwash,PureLife,100,58.72,180
+P0444,Beverages,Energy Drink,CoolSip,80,58.98,15
+P0445,Beverages,Energy Drink,FreshDay,35,21.02,240
+P0446,Dairy,Butter,Aavin,70,41.08,180
+P0447,Household,Dishwash,PureLife,120,81.93,240
+P0448,Beverages,Soft Drink,NatureBest,25,19.12,30
+P0449,Dairy,Butter,Crispo,80,50.24,240
+P0450,Frozen,Frozen Snacks,QuickBite,80,46.45,7
+P0451,Household,Tissue,QuickBite,220,165.95,240
+P0452,Beverages,Energy Drink,GlowCare,150,116.12,30
+P0453,Dairy,Cheese,FreshDay,50,39.14,7
+P0454,Dairy,Curd,Crispo,180,134.85,90
+P0455,Frozen,Frozen Snacks,FizzUp,100,58.76,30
+P0456,Dairy,Butter,QuickBite,45,32.0,15
+P0457,Frozen,Frozen Snacks,FreshDay,100,62.22,365
+P0458,Beverages,Energy Drink,Aavin,45,35.28,15
+P0459,Beverages,Juice,SmartChoice,50,38.68,180
+P0460,Beverages,Water,CoolSip,60,39.08,7
+P0461,Personal Care,Toothpaste,SmartChoice,300,236.06,240
+P0462,Snacks,Biscuits,SmartChoice,30,22.42,240
+P0463,Dairy,Cheese,Crispo,60,46.36,240
+P0464,Snacks,Cookies,DailyNeeds,80,56.48,730
+P0465,Snacks,Biscuits,Aavin,30,21.57,240
+P0466,Dairy,Curd,HomePlus,70,38.51,180
+P0467,Frozen,Ice Cream,CoolSip,45,26.68,60
+P0468,Frozen,Frozen Snacks,FreshDay,30,19.51,15
+P0469,Personal Care,Toothpaste,SmartChoice,150,113.09,180
+P0470,Frozen,Ice Cream,Aavin,40,27.15,15
+P0471,Beverages,Energy Drink,Aavin,25,18.45,7
+P0472,Frozen,Ice Cream,HomePlus,30,18.35,7
+P0473,Dairy,Butter,DailyNeeds,300,189.24,180
+P0474,Frozen,Frozen Vegetables,FizzUp,30,20.8,3
+P0475,Frozen,Ice Cream,HomePlus,50,37.25,15
+P0476,Household,Dishwash,Crispo,30,23.76,15
+P0477,Household,Dishwash,DailyNeeds,60,38.09,15
+P0478,Snacks,Biscuits,Crispo,80,56.98,730
+P0479,Frozen,Ice Cream,CoolSip,300,189.43,365
+P0480,Household,Cleaner,SmartChoice,60,37.79,3
+P0481,Personal Care,Skin Care,GlowCare,40,27.4,730
+P0482,Household,Detergent,DailyNeeds,300,190.63,180
+P0483,Personal Care,Toothpaste,QuickBite,120,71.6,240
+P0484,Dairy,Milk,Aavin,45,27.37,3
+P0485,Household,Tissue,CoolSip,150,102.79,180
+P0486,Frozen,Frozen Snacks,GlowCare,120,83.38,730
+P0487,Snacks,Biscuits,FreshDay,30,20.64,30
+P0488,Household,Tissue,PureLife,100,72.13,7
+P0489,Frozen,Frozen Snacks,SmartChoice,220,135.18,30
+P0490,Personal Care,Shampoo,HomePlus,100,71.44,60
+P0491,Dairy,Milk,SmartChoice,35,25.88,15
+P0492,Snacks,Cookies,FizzUp,50,29.21,60
+P0493,Dairy,Butter,PureLife,45,31.11,60
+P0494,Frozen,Ice Cream,HomePlus,70,48.15,3
+P0495,Household,Cleaner,DailyNeeds,35,21.66,7
+P0496,Frozen,Frozen Vegetables,GlowCare,40,30.0,3
+P0497,Dairy,Curd,Aavin,70,45.38,15
+P0498,Dairy,Cheese,Crispo,50,30.85,90
+P0499,Dairy,Butter,GlowCare,80,58.54,3
+P0500,Beverages,Soft Drink,PureLife,30,23.6,60
